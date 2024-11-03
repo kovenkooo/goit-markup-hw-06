@@ -21,11 +21,8 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <!-- Wrapper -->
-    <!-- Header -->
     <header class="header">
       <div class="container header-container">
-        <!-- Navigation -->
         <nav class="nav">
           <a class="logo-header" href="./index.html"
             >Web<span class="logo-studio-header">Studio</span></a
@@ -38,7 +35,6 @@
             <li><a class="nav-link" href="">Contacts</a></li>
           </ul>
         </nav>
-        <!-- Contacts -->
         <address class="address">
           <ul class="address-list">
             <li class="address-list-item">
@@ -53,18 +49,20 @@
             </li>
           </ul>
         </address>
+        <button class="menu-btn" type="button">
+          <svg class="burger-btn" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger-btn"></use>
+          </svg>
+        </button>
       </div>
     </header>
-    <!-- Main -->
     <main>
-      <!-- First Section -->
       <section class="first-section">
         <div class="container container-first-section">
           <h1 class="page-title">Effective Solutions for Your Business</h1>
           <button class="service-button" type="button">Order Service</button>
         </div>
       </section>
-      <!-- Second Section -->
       <section class="second-section">
         <div class="container container-second-section">
           <h2 class="visually-hidden">Advantages</h2>
@@ -120,7 +118,7 @@
           </ul>
         </div>
       </section>
-      <!-- Third Section -->
+
       <section class="third-section">
         <div class="container container-third-section">
           <h2 class="third-section-title">Our Team</h2>
@@ -296,7 +294,7 @@
           </ul>
         </div>
       </section>
-      <!-- Fourth Section -->
+
       <section class="fourth-section">
         <div class="container container-fourth-section">
           <h2 class="fourth-section-title">Our Portfolio</h2>
@@ -304,10 +302,10 @@
             <li class="project-card">
               <div class="project-card-overlay-container">
                 <img
-                  src="./images/banking-app.jpg"
+                  src="./images/mobile/banking-app-mobile-1x.jpg"
                   alt="Banking App Photo"
-                  width="360"
-                  height="300"
+                  width="288"
+                  height="280"
                 />
                 <p class="project-card-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -323,10 +321,10 @@
             <li class="project-card">
               <div class="project-card-overlay-container">
                 <img
-                  src="./images/cashless-payment.jpg"
+                  src="./images/mobile/cashless-payment-mobile-1x.jpg"
                   alt="Cashless Payment Photo"
-                  width="360"
-                  height="300"
+                  width="288"
+                  height="280"
                 />
                 <p class="project-card-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -342,10 +340,10 @@
             <li class="project-card">
               <div class="project-card-overlay-container">
                 <img
-                  src="./images/meditation-app.jpg"
+                  src="./images/mobile/meditation-app-mobile-1x.jpg"
                   alt="Meditation App Photo"
-                  width="360"
-                  height="300"
+                  width="288"
+                  height="280"
                 />
                 <p class="project-card-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -361,10 +359,10 @@
             <li class="project-card">
               <div class="project-card-overlay-container">
                 <img
-                  src="./images/taxi-service.jpg"
+                  src="./images/mobile/taxi-service-mobile-1x.jpg"
                   alt="Taxi Service Photo"
-                  width="360"
-                  height="300"
+                  width="288"
+                  height="280"
                 />
                 <p class="project-card-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -380,10 +378,10 @@
             <li class="project-card">
               <div class="project-card-overlay-container">
                 <img
-                  src="./images/screen-illustration.jpg"
+                  src="./images/mobile/screen-illustrations-mobile-1x.jpg"
                   alt="Screen Illustration Photo"
-                  width="360"
-                  height="300"
+                  width="288"
+                  height="280"
                 />
                 <p class="project-card-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -399,10 +397,10 @@
             <li class="project-card">
               <div class="project-card-overlay-container">
                 <img
-                  src="./images/online-courses.jpg"
+                  src="./images/mobile/online-courses-mobile-1x.jpg"
                   alt="Online Courses Photo"
-                  width="360"
-                  height="300"
+                  width="288"
+                  height="280"
                 />
                 <p class="project-card-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -420,7 +418,6 @@
       </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
       <div class="container container-footer">
         <div class="footer-logo-container">
@@ -490,7 +487,7 @@
       </div>
     </footer>
 
-    <div class="backdrop is-open">
+    <div class="backdrop">
       <div class="modal">
         <button class="modal-close-btn" type="button">
           <svg class="close-btn-icon" width="8" height="8">
@@ -554,6 +551,7 @@
               placeholder="Text input"
             ></textarea>
           </div>
+
           <div class="checkbox-container">
             <input
               type="checkbox"
@@ -567,8 +565,10 @@
                 <svg class="check-icon" width="10" height="8">
                   <use href="./images/icons.svg#icon-check"></use>
                 </svg> </span
-              >I accept the terms and conditions of the
-              <a href="" class="privacy-policy"> Privacy Policy</a></label
+              ><span
+                >I accept the terms and conditions of the
+                <a href="" class="privacy-policy"> Privacy Policy</a></span
+              ></label
             >
           </div>
           <button class="modal-submit-btn" type="submit">Send</button>

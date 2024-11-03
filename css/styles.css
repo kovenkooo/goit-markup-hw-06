@@ -21,12 +21,6 @@ body {
     background-color: var(--white);
 }
 
-fieldset {
-    padding: 0;
-    margin: 0;
-    border: none;
-}
-
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
@@ -58,9 +52,9 @@ button {
 } */
 
 .container {
-    width: 1158px;
+    /* width: 1158px; */
     margin: 0 auto;
-    padding: 0 15px;
+    /* padding: 0 15px; */
 }
 
 /* Header */
@@ -70,14 +64,15 @@ button {
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 1px 6px rgba(46, 47, 66, 0.08);
+    max-width: 100%;
 }
 
 /* Navigation */
 
 .header-container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
 .nav {
@@ -87,7 +82,6 @@ button {
 }
 
 .logo-header {
-    margin-right: 76px;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -95,6 +89,7 @@ button {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--iris);
+    margin-left: 16px;
 }
 
 .logo-studio-header {
@@ -102,7 +97,7 @@ button {
 }
 
 .nav-list {
-    display: flex;
+    display: none;
     align-items: row;
     justify-content: space-between;
     gap: 40px;
@@ -120,7 +115,7 @@ button {
     position: relative;
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} 
 
 .current {
     position: relative;
@@ -146,6 +141,24 @@ button {
 
 .address {
     font-style: normal;
+    display: none;
+}
+
+.burger-btn {
+    fill: var(--navy-blue);
+}
+
+.menu-btn {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+
+    margin: 16px 16px 16px 0;
 }
 
 /* Contacts */
@@ -179,13 +192,18 @@ button {
 
 .first-section {
     margin: 0 auto;
-    max-width: 1440px;
-    padding: 188px 0;
+    max-width: 100%;
+    min-height: 432px;
+    padding: 72px 0;
     background: var(--navy-blue);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-background.jpg);
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/mobile/hero-background-mobile-1x.jpg);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px;
 }
 
 .container-first-section {
@@ -196,13 +214,14 @@ button {
 }
 
 .page-title {
-    max-width: 496px;
+    max-width: 216px;
     font-weight: 700;
-    font-size: 56px;
-    line-height: 1.07;
+    font-size: 36px;
+    line-height: 1.11;
     color: var(--white);
     letter-spacing: 0.02em;
     text-align: center;
+    min-height: 160px;
 }
 
 .service-button {
@@ -231,7 +250,8 @@ button {
 /* Second Section */
 
 .second-section {
-    padding: 120px 0;
+    /* padding: 120px 0; */
+    padding: 96px 16px;
 }
 
 .visually-hidden {
@@ -259,32 +279,37 @@ button {
     height: 112px;
     background: var(--cloud);
     margin-bottom: 8px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
 
 .advantages-list {
     display: flex;
-    justify-content: space-between;
-    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 72px;
+    margin: 0 16px;
 }
 
 .advantages-list-item {
-    width: calc((100%-72px)/4);
+    /* width: calc((100%-72px)/4); */
+    width: 288px;;
+    min-height: 120px;
 }
 
 .advantages-list-title {
     margin-bottom: 8px;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
     letter-spacing: 0.02em;
     color: var(--navy-blue);
+    text-align: center;
 }
 
 .advantages-list-content {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -293,15 +318,18 @@ button {
 
 /* Third Section */
 
+
+
 .third-section {
-    padding: 120px 0;
+    padding: 96px 28px;
     background: var(--cloud);
 }
 
 .team-list {
     display: flex;
-    justify-content: space-between;
-    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 72px;
 }
 
 .third-section-title {
@@ -379,15 +407,14 @@ button {
 /* Fourth Section */
 
 .fourth-section {
-    padding: 120px 0;
+    padding: 96px 16px;
 }
 
 .project-card-list {
     display: flex;
-    gap: 24px;
+    gap: 48px;
     flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 48px;
+    justify-content: center;
 }
 
 .fourth-section-content-card {
@@ -426,7 +453,8 @@ button {
 }
 
 .project-card {
-    width: calc((100% - 48px) / 3);
+    /* width: calc((100% - 48px) / 3); */
+    width: 288px;
     background-color: var(--white);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -437,7 +465,7 @@ button {
 }
 
 .project-card-overlay {
-    display: flex;
+    display: none;
     justify-content: center;
     padding: 40px 32px;
     background: var(--iris);
@@ -468,18 +496,22 @@ button {
 /* Footer */
 
 .footer {
-    padding: 100px 0;
+    padding: 96px 16px;
     background: var(--navy-blue);
 }
 
 .container-footer {
     display: flex;
-    flex-direction: row;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
 }
 
 .footer-logo-container {
-    margin-right: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 288px;
 }
 
 .logo-footer {
@@ -507,10 +539,15 @@ button {
     color: var(--cloud);
 }
 
+.footer-social-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .footer-social-list {
     display: flex;
     gap: 16px;
-    margin-top: 16px;
 }
 
 .footer-title {
@@ -520,6 +557,7 @@ button {
     letter-spacing: 0.02em;
     color: var(--white);
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .footer-social-list-item-link {
@@ -549,7 +587,9 @@ button {
 }
 
 .footer-subscribe-container {
-    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .footer-form-input {
@@ -587,12 +627,13 @@ button {
     letter-spacing: 0.02em;
     color: var(--white);
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .footer-subscribe-btn {
     border-radius: 4px;
     padding: 8px 24px;
-    min-width: 165px;
+    width: 165px;
     height: 40px;
     background: var(--iris);
 
@@ -604,7 +645,6 @@ button {
     text-align: center;
     color: var(--white);
 
-    margin-left: 24px;
     border: none;
 
     display: flex;
@@ -621,8 +661,10 @@ button {
 
 .footer-form {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 16px;
 }
 
 .subscribe-icon {
@@ -666,10 +708,10 @@ button {
     transform: translate(-50%, -50%);
 
     border-radius: 4px;
-    width: 408px;
-    min-height: 584px;
+    width: 288px;
+    min-height: 623px;
 
-    padding: 72px 24px 24px 24px;
+    padding: 72px 16px 0 16px;
 
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background: var(--dairy);
@@ -740,7 +782,7 @@ button {
 .modal-input {
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    width: 360px;
+    width: 256px;
     height: 40px;
 
     padding-left: 38px;
@@ -774,7 +816,7 @@ button {
     resize: none;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    width: 360px;
+    width: 256px;
     height: 120px;
 
     padding: 8px 16px;
@@ -844,6 +886,10 @@ button {
 
 .checkbox-container {
     margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
 }
 
 .checkbox-label {
@@ -853,15 +899,20 @@ button {
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: var(--light-slate);
+
+    display: flex;
+    justify-content: center;
 }
 
-.checkbox-label span {
+.checkbox-label .checkbox-span {
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     width: 16px;
     height: 16px;
 
     margin-right: 8px;
+
+    flex-shrink: 0;
 
     display: inline-flex;
     justify-content: center;
@@ -872,7 +923,7 @@ button {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox:checked + .checkbox-label span {
+.checkbox:checked + .checkbox-label .checkbox-span {
     background-color: var(--ocean);
     border: none;
     fill: var(--cloud);
