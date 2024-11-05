@@ -156,6 +156,8 @@ button {
         color: var(--ocean);
 }
 
+/* Tablet */
+
 @media (min-width: 768px) {
     .header-container {
         padding: 0 16px;
@@ -171,7 +173,6 @@ button {
 
     .nav-list {
         display: flex;
-        align-items: row;
         justify-content: space-between;
         gap: 40px;
     }
@@ -408,19 +409,23 @@ button {
     background-color: var(--ocean);
 }
 
+/* Tablet */
+
 @media (min-width: 768px) {
 
-    @media (min-resolution: 192dpi) {
-        .first-section {
-            background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-                    url(../images/tablet/hero-background-tablet-1x.jpg);
-        }
-    }
+    
 
     .first-section {
         background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             url(../images/tablet/hero-background-tablet-1x.jpg);
         padding: 112px 0;
+    }
+
+    @media (min-resolution: 192dpi) {
+        .first-section {
+            background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/tablet/hero-background-tablet-2x.jpg);
+        }
     }
 
     .container-first-section {
@@ -462,16 +467,8 @@ button {
     display: none;
 }
 
-.icon-container {
-    border: 1px solid var(--light-slate);
-    border-radius: 4px;
-    width: 264px;
-    height: 112px;
-    background: var(--cloud);
-    margin-bottom: 8px;
+.advantages-icon {
     display: none;
-    justify-content: center;
-    align-items: center;
 }
 
 .advantages-list {
@@ -505,6 +502,8 @@ button {
     color: var(--slate);
 }
 
+/* Tablet */
+
 @media (min-width: 768px) {
     .advantages-list {
         flex-direction: row;
@@ -523,8 +522,6 @@ button {
 }
 
 /* Third Section */
-
-
 
 .third-section {
     padding: 96px 28px;
@@ -609,6 +606,8 @@ button {
 .social-link-icon {
     fill: var(--cloud);
 }
+
+/* Tablet */
 
 @media (min-width: 768px) {
     .team-list {
@@ -714,6 +713,8 @@ button {
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     background: var(--white);
 }
+
+/* Tablet */
 
 @media (min-width: 768px) {
     .project-card-list {
@@ -835,10 +836,11 @@ button {
 .footer-form-input {
     border: 1px solid #fff;
     border-radius: 4px;
-    width: 264px;
+    width: 288px;
     height: 40px;
     padding-left: 16px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    opacity: 0.3;
 
     font-size: 12px;
     line-height: 2;
@@ -913,6 +915,14 @@ button {
 }
 
 @media (min-width: 768px) {
+    .footer {
+        padding: 0;
+    }
+
+    .footer-form-input {
+        width: 264px;
+    }
+
     .container-footer {
         flex-direction: row;
         flex-wrap: wrap;
@@ -920,9 +930,6 @@ button {
         justify-content: flex-start;
         gap: 72px 24px;
         width: 100%;
-    }
-
-    .footer {
         padding: 96px 108px;
     }
 
@@ -1206,4 +1213,25 @@ button {
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: var(--iris);
+}
+
+/* Tablet Modal */
+
+@media (min-width: 768px) {
+    .modal {
+        width: 408px;
+        min-height: 584px;
+    }
+
+    .modal-input {
+        width: 360px;
+    }
+
+    .modal-textarea {
+        width: 360px;
+    }
+
+    .checkbox-container {
+        width: 360px;
+    }
 }
